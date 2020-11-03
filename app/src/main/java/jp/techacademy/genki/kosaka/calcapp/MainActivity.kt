@@ -49,28 +49,14 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             R.id.btn_waru -> rslt = calc(waru)
         }
 
-
-        //calc(1)
-
         val intent = Intent(this, SecondActivity::class.java)
         intent.putExtra("VALUE1", rslt)
         startActivity(intent)
-        /*
-        when(v.id){
-            R.id.btn_tasu -> textView.text = editText.text.toString()
-            R.id.btn_hiku -> showAlertDialog()
-            R.id.btn_kakeru -> showTimePickerDialog()
-            R.id.btn_waru -> showDatePickerDialog()
-        }*/
     }
 
     fun calc(kind: Int): String{
-
-        // editText1.text.toString().toInt() + editText2.text.toString().toInt()
-        Log.d("kotlintest", (editText1.text.toString().toDouble() + editText2.text.toString().toDouble()).toString())
-        Log.d("kotlintest", (editText1.text.toString().toDouble() - editText2.text.toString().toDouble()).toString())
-        Log.d("kotlintest", (editText1.text.toString().toDouble() * editText2.text.toString().toDouble()).toString())
-        Log.d("kotlintest", (editText1.text.toString().toDouble() / editText2.text.toString().toDouble()).toString())
+        
+        //Log.d("kotlintest", (editText1.text.toString().toDouble() + editText2.text.toString().toDouble()).toString())
 
         val val1 = editText1.text.toString().toDouble()
         val val2 = editText2.text.toString().toDouble()
